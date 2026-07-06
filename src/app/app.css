@@ -1,0 +1,78 @@
+:host {
+	display: block;
+	min-height: 100vh;
+	color: #eff6ff;
+	background:
+		radial-gradient(circle at top left, rgba(96, 165, 250, 0.3), transparent 28%),
+		radial-gradient(circle at top right, rgba(251, 191, 36, 0.18), transparent 24%),
+		linear-gradient(180deg, #081120 0%, #0e1830 45%, #111c35 100%);
+	position: relative;
+	overflow: hidden;
+}
+
+:host::before,
+:host::after {
+	content: '';
+	position: fixed;
+	border-radius: 999px;
+	filter: blur(14px);
+	pointer-events: none;
+	opacity: 0.7;
+}
+
+:host::before {
+	top: 6vh;
+	right: -8vw;
+	width: 22rem;
+	height: 22rem;
+	background: rgba(56, 189, 248, 0.18);
+}
+
+:host::after {
+	bottom: -10vh;
+	left: -6vw;
+	width: 18rem;
+	height: 18rem;
+	background: rgba(251, 191, 36, 0.12);
+}
+
+.app-shell {
+	position: relative;
+	z-index: 1;
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: clamp(1.25rem, 2vw, 2rem);
+	font-family: Inter, "Segoe UI", system-ui, sans-serif;
+}
+
+.hero {
+	display: grid;
+	gap: 0.85rem;
+	max-width: 42rem;
+	padding: clamp(1.25rem, 2vw, 2rem) 0 1.75rem;
+}
+
+.eyebrow {
+	margin: 0;
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: #93c5fd;
+}
+
+h1 {
+	margin: 0;
+	font-size: clamp(2.3rem, 5vw, 4.75rem);
+	line-height: 0.95;
+	letter-spacing: -0.05em;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+.hero-copy {
+	margin: 0;
+	max-width: 36rem;
+	font-size: clamp(1rem, 1.3vw, 1.125rem);
+	line-height: 1.65;
+	color: rgba(226, 232, 240, 0.82);
+}

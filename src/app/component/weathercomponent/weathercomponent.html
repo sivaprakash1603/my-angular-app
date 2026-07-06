@@ -1,0 +1,20 @@
+<section class="weather-shell">
+	<div class="weather-card">
+		<p class="eyebrow">Weather forecast</p>
+		<h2>5 day outlook</h2>
+
+		@if (forecasts$ | async; as forecasts) {
+			<div class="forecast-grid">
+				@for (forecast of forecasts; track forecast.date) {
+					<article class="forecast-item">
+						<p class="forecast-date">{{ forecast.date | date: 'mediumDate' }}</p>
+						<p class="forecast-summary">{{ forecast.summary }}</p>
+						<p class="forecast-temperature">{{ forecast.temperatureC }}°C / {{ forecast.temperatureF }}°F</p>
+					</article>
+				}
+			</div>
+		} @else {
+			<p class="loading">Loading forecast...</p>
+		}
+	</div>
+</section>
