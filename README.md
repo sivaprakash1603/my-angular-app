@@ -61,3 +61,14 @@ Pipeline on push to `main`:
 3. Install dependencies
 4. Build Angular app with GitHub Pages base href
 5. Upload artifact and deploy via GitHub Pages
+
+## Screenshots
+
+### Application Running Locally
+![Application Running Locally](image.png)
+
+### GitHub Actions Successful Run
+![GitHub Actions Successful Run](image%20copy.png)
+
+### Application Running from GitHub Pages
+![Application Running from GitHub Pages](image%20copy%202.png)
