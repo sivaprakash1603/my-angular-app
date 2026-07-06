@@ -1,59 +1,63 @@
-# MyAngularApp
+# Angular Weather Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+## Project Description
+This project is a responsive Angular weather dashboard that fetches forecast data from:
 
-## Development server
+https://sampleapi20260706g3-bvdacte9b0dvhudv.canadacentral-01.azurewebsites.net/Weatherforecast
 
-To start a local development server, run:
+It includes:
+- a single weather component (`weather`)
+- `weather.service.ts` for API integration via Angular `HttpClient`
+- loading and error states
+- tabular weather display (Date, Temperature C/F, Summary)
+- forecast count, hot-row highlighting (`temperatureC > 30`), and a refresh button
 
-```bash
-ng serve
-```
+## Angular Version
+- Angular CLI: `21.2.13`
+- Angular framework: `21.2.x`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Installation Steps
+1. Clone the repository.
+2. Install dependencies:
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+3. Run locally:
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+4. Open:
 
-## Running unit tests
+http://localhost:4200/
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Build Steps
+For production build:
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+For GitHub Pages build:
 
 ```bash
-ng e2e
+npm run build -- --base-href /my-angular-app/
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Deployment URL
+https://sivaprakash1603.github.io/my-angular-app/
 
-## Additional Resources
+## CI/CD (GitHub Actions)
+Workflow file:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+`.github/workflows/deploy.yml`
+
+Pipeline on push to `main`:
+1. Checkout code
+2. Setup Node.js
+3. Install dependencies
+4. Build Angular app with GitHub Pages base href
+5. Upload artifact and deploy via GitHub Pages
