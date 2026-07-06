@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Weathercomponent } from './component/weathercomponent/weathercomponent';
+import { Weather } from './component/weather/weather';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Weathercomponent],
+  imports: [Weather],
   template: `
     <main class="app-shell">
       <section class="hero">
@@ -16,7 +16,7 @@ import { Weathercomponent } from './component/weathercomponent/weathercomponent'
         </p>
       </section>
 
-      <app-weathercomponent />
+      <app-weather />
     </main>
   `,
   styleUrl: './app.css',
